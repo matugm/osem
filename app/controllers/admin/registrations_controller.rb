@@ -19,7 +19,7 @@ module Admin
       respond_to do |format|
         format.html
         format.json do
-          render json: RegistrationDatatable.new(view_context, conference: @conference)
+          render json: RegistrationDatatable.new(params, view_context: view_context, conference: @conference)
         end
       end
     end
